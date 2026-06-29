@@ -53,6 +53,15 @@
   .spec-v { font-size: 12px; color: var(--text2); text-align: right; }
   .status-live { display: inline-flex; align-items: center; gap: 6px; }
   .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #3A3A3A; flex-shrink: 0; }
+  #team { border-bottom: 1px solid var(--border); }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .team-card { padding: 48px 56px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .team-card:nth-child(3n) { border-right: none; }
+  .team-card:nth-last-child(-n+3) { border-bottom: none; }
+  .team-initial { width: 40px; height: 40px; border-radius: 50%; background: var(--border2); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: var(--text2); margin-bottom: 24px; }
+  .team-name { font-size: 16px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 6px; }
+  .team-role { font-size: 12px; color: var(--text3); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px; }
+  .team-bg { font-size: 13px; color: var(--text2); }
   #company { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
   .company-left { padding: 80px 56px; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; }
   .company-statement { font-size: clamp(18px, 2.2vw, 24px); font-weight: 300; line-height: 1.6; letter-spacing: -0.015em; color: var(--text); margin-top: 28px; max-width: 400px; }
@@ -80,6 +89,9 @@
     .products-grid { grid-template-columns: 1fr; }
     .product-card { padding: 40px 24px; border-right: none; border-bottom: 1px solid var(--border); }
     .product-card:last-child { border-bottom: none; }
+    .team-grid { grid-template-columns: 1fr 1fr; }
+    .team-card { padding: 32px 24px; border-right: none; border-bottom: 1px solid var(--border); }
+    .team-card:nth-child(odd) { border-right: 1px solid var(--border); }
     #company { grid-template-columns: 1fr; }
     .company-left { padding: 56px 24px; border-right: none; border-bottom: 1px solid var(--border); }
     .company-right { padding: 56px 24px; }
@@ -95,6 +107,7 @@
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="#products">Products</a></li>
+      <li><a href="#team">Team</a></li>
       <li><a href="#company">Company</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Contact</a>
@@ -104,7 +117,7 @@
   <p class="eyebrow">주식회사 슬램 · Seoul, Korea</p>
   <h1>We build<br><em>AI-native</em><br>products.</h1>
   <div class="hero-foot">
-    <p class="hero-desc">AI로 언어와 콘텐츠의 경계를 허뭅니다.<br>두 개의 제품을 개발 중입니다.</p>
+    <p class="hero-desc">AI로 언어와 콘텐츠의 경계를 허뚝니다.<br>두 개의 제품을 개발 중입니다.</p>
     <div class="hero-actions">
       <a href="#products" class="btn btn-solid">Products</a>
       <a href="#contact" class="btn btn-ghost">Get in touch</a>
@@ -131,7 +144,7 @@
     <div class="product-card">
       <p class="product-idx">02</p>
       <h2 class="product-name">NOVA</h2>
-      <p class="product-desc">웹툰, AI 필름, 소설, 애니메이션을 아우르는 AI 콘텐츠 플랫폼. 창작의 문턱을 낮춥니다.</p>
+      <p class="product-desc">웹툰, AI 필름, 소설, 애니메이션을 아우르는 AI 콘텐츠 플랫폼. 창작의 문턴을 낙췄니다.</p>
       <div class="spec-table">
         <div class="spec-row"><span class="spec-k">Category</span><span class="spec-v">AI Content Platform</span></div>
         <div class="spec-row"><span class="spec-k">Content</span><span class="spec-v">Webtoon · Film · Novel</span></div>
@@ -141,10 +154,54 @@
     </div>
   </div>
 </section>
+<section id="team">
+  <div class="section-header">
+    <span class="section-label">Team</span>
+    <span class="section-title">슬램을 만드는 사람들</span>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-initial">SJ</div>
+      <div class="team-name">소진환</div>
+      <div class="team-role">CEO · Co-founder</div>
+      <div class="team-bg">Penn State University · Economics</div>
+    </div>
+    <div class="team-card">
+      <div class="team-initial">SM</div>
+      <div class="team-name">엄승민</div>
+      <div class="team-role">사내이사 · Co-founder</div>
+      <div class="team-bg">Business &amp; Strategy</div>
+    </div>
+    <div class="team-card">
+      <div class="team-initial">KS</div>
+      <div class="team-name">김기성</div>
+      <div class="team-role">Backend Engineer</div>
+      <div class="team-bg">Server · API · Infrastructure</div>
+    </div>
+    <div class="team-card">
+      <div class="team-initial">JS</div>
+      <div class="team-name">박지성</div>
+      <div class="team-role">Frontend Engineer</div>
+      <div class="team-bg">UI Design · Development</div>
+    </div>
+    <div class="team-card">
+      <div class="team-initial">JB</div>
+      <div class="team-name">배정빈</div>
+      <div class="team-role">Engineer</div>
+      <div class="team-bg">Hardware · Mechanical Engineering</div>
+    </div>
+    <div class="team-card">
+      <div class="team-initial">WJ</div>
+      <div class="team-name">송우주</div>
+      <div class="team-role">Data Manager</div>
+      <div class="team-bg">Data · Market Research</div>
+    </div>
+  </div>
+</section>
 <section id="company">
   <div class="company-left">
     <p class="eyebrow">Company</p>
-    <p class="company-statement">AI가 실제 삶을 바꿀 수 있다고 믿는 팀입니다. 빠르게 만들고, 검증하고, 개선합니다.</p>
+    <p class="company-statement">AI가 실제 삶을 바꿼 수 있다고 믿는 팀입니다. 빠르게 만들고, 검증하고, 개선합니다.</p>
   </div>
   <div class="company-right">
     <p class="eyebrow">About</p>
@@ -152,7 +209,7 @@
       <div class="detail-row"><span class="detail-k">Company</span><span class="detail-v">주식회사 슬램</span></div>
       <div class="detail-row"><span class="detail-k">Founded</span><span class="detail-v">2026</span></div>
       <div class="detail-row"><span class="detail-k">Location</span><span class="detail-v">Seoul, Korea</span></div>
-      <div class="detail-row"><span class="detail-k">Team</span><span class="detail-v">5명</span></div>
+      <div class="detail-row"><span class="detail-k">Team</span><span class="detail-v">6명</span></div>
       <div class="detail-row"><span class="detail-k">Focus</span><span class="detail-v">AI-Native Products</span></div>
     </div>
   </div>
